@@ -69,6 +69,7 @@ class TestMemoize(unittest.TestCase):
 
 
     def test_memoize(self):
+        """..."""
         test_obj = TestClass()
 
         with patch.object(test_obj, 'a_method', return_value=42) as mock_method:
