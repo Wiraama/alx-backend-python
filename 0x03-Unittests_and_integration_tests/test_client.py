@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-""" modue to test git hub """
-import unittest
-from unittest.mock import patch
-from parameterized import parameterized
+""" Module for testing client """
+
 from client import GithubOrgClient
+from fixtures import TEST_PAYLOAD
+from parameterized import parameterized, parameterized_class
+import json
+import unittest
+from unittest.mock import patch, PropertyMock, Mock
 
 
 class TestGithubOrgClient(unittest.TestCase):
