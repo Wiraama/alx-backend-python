@@ -13,8 +13,6 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": {"b": 2}}, ("a",), {"b": 2}),
         ({"a": {"b": 2}}, ("a", "b"), 2)
         ])
-
-
     def test_access_nested_map(self, nested_map, path, expected):
         """ >>> """
         self.assertEqual(access_nested_map(nested_map, path), expected)
@@ -33,8 +31,6 @@ class TestAccessNestedMap(unittest.TestCase):
 class TestGetJson(unittest.TestCase):
     """ class and implement the TestGetJson.test_get_json method to test
     that utils.get_json returns the expected result."""
-    
-
     @parameterized.expand([
         ("http://example.com", {"payload": True}),
         ("http://holberton.io", {"payload": False})
